@@ -1,180 +1,64 @@
 
----
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
----
+<section class="selected-work">
+	<h2>Selected Work</h2>
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-	</head>
+	<h3>Writing &amp; Publications</h3>
 
-	<body>
-		<Header />
+	<div class="publication">
+		<p>
+			<strong>
+				Holding the World Together: Myth, Language, and the
+				Reawakening of Kanyini in the Irish Imagination
+			</strong>
+		</p>
+		<p>
+			<em>Dúchas: Responses to Amitav Ghosh’s Seamus Deane –
+			Field Day Lecture</em> (2026).
+		</p>
+	</div>
 
-		<main>
-			<section class="intro">
-				<div class="intro-text">
-					<p class="eyebrow">Writer · Artist · Educator</p>
-					<h1>Nuala King</h1>
-					<p class="welcome">
-						Welcome to my website. Here you can explore my writing,
-						creative work and reflections on place, story and our
-						relationship with the living world.
-					</p>
-				</div>
-<img
-    class="portrait"
-    src="https://nualaking.com/nuala-king.jpg"
-    alt="Portrait of Nuala King"
-    width="420"
-    height="500"
-/>
+	<div class="publication">
+		<p>
+			<strong>
+				Holding the World Together: Myth, Language, and the
+				Reawakening of Kanyini in the Irish Imagination
+			</strong>
+		</p>
+		<p>
+			<em>Studies: An Irish Quarterly Review</em>,
+			114, no. 456 (Winter 2025–2026).
+		</p>
+	</div>
 
-			</section>
-
-			<section class="content-section">
-				<h2>About</h2>
-				<p>
-					My background is in architecture and adult education.
-					My writing and creative practice explore Irish folklore,
-					cultural memory, landscape and ecological belonging.
-				</p>
-				<p>
-					I am interested in how stories connect us with the places
-					we inhabit and help us imagine more reciprocal relationships
-					with the natural world.
-				</p>
-			</section>
-
-			<section class="content-section">
-				<h2>Selected Work</h2>
-
-				<div class="work-item">
-					<h3>Writing &amp; Publications</h3>
-					<p>
-						Essays, cultural writing and my contribution to
-						<em>Dúchas</em>.
-					</p>
-				</div>
-
-				<div class="work-item">
-					<h3>Art &amp; Placemaking</h3>
-					<p>
-						Creative practice, community art and our connections
-						with place.
-					</p>
-				</div>
-
-				<div class="work-item">
-					<h3>Music &amp; Song</h3>
-					<p>
-						Traditional singing and musical explorations, gathered
-						here as they develop.
-					</p>
-				</div>
-			</section>
-
-			<section class="content-section">
-				<h2>Connect</h2>
-				<p>
-					Thank you for visiting. If my work resonates with you,
-					you are very welcome to get in touch.
-				</p>
-				<p>
-					<a href="mailto:hello@nualaking.com">Get in touch</a>
-				</p>
-			</section>
-		</main>
-
-		<Footer />
-	</body>
-</html>
+	<h3>Art &amp; Placemaking</h3>
+</section>
 
 <style>
-	main {
-		max-width: 900px;
+	.selected-work {
+		max-width: 1000px;
 		margin: 0 auto;
-		padding: 3rem 1.5rem 5rem;
-		line-height: 1.8;
+		padding: 2rem 1.5rem;
 	}
 
-	.intro {
-		display: grid;
-		grid-template-columns: minmax(0, 1fr) 280px;
-		gap: 3rem;
-		align-items: center;
-		padding: 2rem 0 4rem;
+	.selected-work h2 {
+		margin-bottom: 2rem;
 	}
 
-	.eyebrow {
-		font-size: 0.85rem;
-		letter-spacing: 0.12em;
-		text-transform: uppercase;
-		opacity: 0.7;
+	.selected-work h3 {
+		margin-top: 2rem;
+		margin-bottom: 1rem;
 	}
 
-	h1 {
-		font-size: clamp(2.8rem, 7vw, 4.5rem);
-		line-height: 1.1;
-		margin: 0.5rem 0 1.5rem;
+	.publication {
+		margin-bottom: 1.5rem;
+		line-height: 1.7;
 	}
 
-	h2 {
-		font-size: 1.6rem;
-		margin: 0 0 1rem;
+	.publication p {
+		margin: 0.3rem 0;
 	}
+</style>
 
-	h3 {
-		font-size: 1.1rem;
-		margin: 0 0 0.25rem;
-	}
-
-	.welcome {
-		font-size: 1.2rem;
-		max-width: 520px;
-	}
-
-.portrait {
-    display: block;
-    width: 100%;
-    max-width: 280px;
-    height: auto;
-    justify-self: center;
-    filter: grayscale(100%);
-}
-
-	.content-section {
-		margin-bottom: 3rem;
-		max-width: 680px;
-	}
-
-	.work-item {
-		margin: 1.5rem 0;
-	}
-
-	.work-item p {
-		margin-top: 0.25rem;
-	}
-
-	a {
-		text-underline-offset: 0.2em;
-	}
-
-	@media (max-width: 600px) {
-		main {
-			padding: 2rem 1.25rem 3rem;
-		}
-
-		.intro {
-			grid-template-columns: 1fr;
-			gap: 1.5rem;
-			padding-top: 1rem;
-		}
 
 		.portrait {
 			max-width: 360px;
