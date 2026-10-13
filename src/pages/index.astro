@@ -14,14 +14,24 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<section class="intro">
-				<p class="eyebrow">Writer · Artist · Educator</p>
-				<h1>Nuala King</h1>
-				<p class="welcome">
-					Welcome. This is a home for my writing, creative work and ongoing
-					exploration of our relationship with place, story and the living world.
-				</p>
-			</section>
+<section class="intro">
+    <div class="intro-text">
+        <p class="eyebrow">Writer · Artist · Educator</p>
+        <h1>Nuala King</h1>
+        <p class="welcome">
+            Welcome. This is a home for my writing, creative work and ongoing
+            exploration of our relationship with place, story and the living world.
+        </p>
+    </div>
+
+    <img
+        class="portrait"
+        src="/nuala-king.jpg"
+        alt="Nuala King"
+        width="420"
+        height="500"
+    />
+</section>
 
 			<section>
 				<h2>About</h2>
@@ -120,4 +130,28 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	a {
 		text-underline-offset: 0.2em;
 	}
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem 0 3rem;
+}
+
+.portrait {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(100%);
+}
+
+@media (max-width: 600px) {
+    .intro {
+        grid-template-columns: 1fr;
+    }
+
+    .portrait {
+        max-width: 320px;
+    }
+}
 </style>
