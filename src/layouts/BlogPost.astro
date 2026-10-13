@@ -8,7 +8,7 @@ import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate } = Astro.props;
 ---
 
 <html lang="en">
@@ -16,33 +16,24 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<BaseHead title={title} description={description} />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<style>
-		main {
-    width: 100%;
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 1rem 1.5rem 4rem;
-    box-sizing: border-box;
-}
+			main {
+				max-width: 760px;
+				margin: 0 auto;
+				padding: 3rem 1.5rem;
+			}
 
-article {
-    margin: 0;
-    padding: 0;
-}
-			.hero-image img {
-				display: block;
+			article {
 				width: 100%;
-				height: auto;
-				margin-bottom: 2rem;
 			}
 
 			.title {
 				margin-bottom: 2rem;
-				line-height: 1.4;
 			}
 
 			h1 {
-				margin: 0 0 0.75rem;
 				font-size: clamp(2rem, 5vw, 3rem);
+				line-height: 1.2;
+				margin: 0 0 1rem;
 			}
 
 			.date {
@@ -61,7 +52,7 @@ article {
 
 			@media (max-width: 600px) {
 				main {
-					padding: 1.5rem 1rem 3rem;
+					padding: 2rem 1rem;
 				}
 			}
 		</style>
@@ -69,18 +60,15 @@ article {
 
 	<body>
 		<Header />
+
 		<main>
 			<article>
-				{heroImage && (
-					<div class="hero-image">
-						<img src={heroImage} alt="" />
-					</div>
-				)}
-
 				<div class="title">
 					<h1>{title}</h1>
+
 					<div class="date">
 						<FormattedDate date={pubDate} />
+
 						{updatedDate && (
 							<div class="last-updated-on">
 								Last updated on <FormattedDate date={updatedDate} />
@@ -94,6 +82,7 @@ article {
 				</div>
 			</article>
 		</main>
+
 		<Footer />
 	</body>
 </html>
