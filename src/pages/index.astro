@@ -1,3 +1,4 @@
+
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
@@ -11,85 +12,103 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
+
 	<body>
 		<Header />
+
 		<main>
-<section class="intro">
-    <div class="intro-text">
-        <p class="eyebrow">Writer · Artist · Educator</p>
-        <h1>Nuala King</h1>
-        <p class="welcome">
-            Welcome. This is a home for my writing, creative work and ongoing
-            exploration of our relationship with place, story and the living world.
-        </p>
-    </div>
+			<section class="intro">
+				<div class="intro-text">
+					<p class="eyebrow">Writer · Artist · Educator</p>
+					<h1>Nuala King</h1>
+					<p class="welcome">
+						Welcome to my website. Here you can explore my writing,
+						creative work and reflections on place, story and our
+						relationship with the living world.
+					</p>
+				</div>
 
-    <img
-        class="portrait"
-        src="/nuala-king.jpg"
-        alt="Nuala King"
-        width="420"
-        height="500"
-    />
-</section>
+				<img
+					class="portrait"
+					src="/nuala-king.jpg"
+					alt="Portrait of Nuala King"
+					width="420"
+					height="500"
+				/>
+			</section>
 
-			<section>
+			<section class="content-section">
 				<h2>About</h2>
 				<p>
-					My background is in architecture and adult education. My writing and
-					creative practice explore Irish folklore, cultural memory, landscape
-					and ecological belonging.
+					My background is in architecture and adult education.
+					My writing and creative practice explore Irish folklore,
+					cultural memory, landscape and ecological belonging.
 				</p>
 				<p>
-					I am particularly interested in how stories can reconnect us with
-					the places we inhabit and help us imagine more reciprocal relationships
+					I am interested in how stories connect us with the places
+					we inhabit and help us imagine more reciprocal relationships
 					with the natural world.
 				</p>
 			</section>
 
-			<section>
-				<h2>Selected work</h2>
-				<ul class="work-list">
-					<li>
-						<strong>Writing &amp; publications</strong>
-						<p>Essays, cultural writing and my contribution to <em>Dúchas</em>.</p>
-					</li>
-					<li>
-						<strong>Art &amp; placemaking</strong>
-						<p>Creative practice, community art and our connections with place.</p>
-					</li>
-					<li>
-						<strong>Music &amp; song</strong>
-						<p>Traditional singing and musical explorations, gathered here as they develop.</p>
-					</li>
-				</ul>
+			<section class="content-section">
+				<h2>Selected Work</h2>
+
+				<div class="work-item">
+					<h3>Writing &amp; Publications</h3>
+					<p>
+						Essays, cultural writing and my contribution to
+						<em>Dúchas</em>.
+					</p>
+				</div>
+
+				<div class="work-item">
+					<h3>Art &amp; Placemaking</h3>
+					<p>
+						Creative practice, community art and our connections
+						with place.
+					</p>
+				</div>
+
+				<div class="work-item">
+					<h3>Music &amp; Song</h3>
+					<p>
+						Traditional singing and musical explorations, gathered
+						here as they develop.
+					</p>
+				</div>
 			</section>
 
-			<section>
+			<section class="content-section">
 				<h2>Connect</h2>
 				<p>
-					Thank you for visiting. If my work resonates with you, or you would
-					like to get in touch, you are very welcome to contact me.
+					Thank you for visiting. If my work resonates with you,
+					you are very welcome to get in touch.
 				</p>
 				<p>
-					<a href="mailto:hello@nualaking.com">Email me</a>
+					<a href="mailto:hello@nualaking.com">Get in touch</a>
 				</p>
 			</section>
 		</main>
+
 		<Footer />
 	</body>
 </html>
 
 <style>
 	main {
-		max-width: 720px;
+		max-width: 900px;
 		margin: 0 auto;
 		padding: 3rem 1.5rem 5rem;
 		line-height: 1.8;
 	}
 
 	.intro {
-		padding: 2rem 0 3rem;
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) 280px;
+		gap: 3rem;
+		align-items: center;
+		padding: 2rem 0 4rem;
 	}
 
 	.eyebrow {
@@ -100,58 +119,64 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	}
 
 	h1 {
-		font-size: clamp(2.8rem, 8vw, 4.5rem);
+		font-size: clamp(2.8rem, 7vw, 4.5rem);
 		line-height: 1.1;
 		margin: 0.5rem 0 1.5rem;
 	}
 
 	h2 {
-		font-size: 1.5rem;
-		margin-top: 2.5rem;
+		font-size: 1.6rem;
+		margin: 0 0 1rem;
+	}
+
+	h3 {
+		font-size: 1.1rem;
+		margin: 0 0 0.25rem;
 	}
 
 	.welcome {
 		font-size: 1.2rem;
-		max-width: 600px;
+		max-width: 520px;
 	}
 
-	.work-list {
-		padding-left: 1.25rem;
+	.portrait {
+		display: block;
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		filter: grayscale(100%);
 	}
 
-	.work-list li {
-		padding: 0.5rem 0;
+	.content-section {
+		margin-bottom: 3rem;
+		max-width: 680px;
 	}
 
-	.work-list p {
+	.work-item {
+		margin: 1.5rem 0;
+	}
+
+	.work-item p {
 		margin-top: 0.25rem;
 	}
 
 	a {
 		text-underline-offset: 0.2em;
 	}
-.intro {
-    display: grid;
-    grid-template-columns: 1fr 280px;
-    gap: 2rem;
-    align-items: center;
-    padding: 2rem 0 3rem;
-}
 
-.portrait {
-    width: 100%;
-    height: auto;
-    display: block;
-    filter: grayscale(100%);
-}
+	@media (max-width: 600px) {
+		main {
+			padding: 2rem 1.25rem 3rem;
+		}
 
-@media (max-width: 600px) {
-    .intro {
-        grid-template-columns: 1fr;
-    }
+		.intro {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+			padding-top: 1rem;
+		}
 
-    .portrait {
-        max-width: 320px;
-    }
-}
+		.portrait {
+			max-width: 360px;
+		}
+	}
 </style>
