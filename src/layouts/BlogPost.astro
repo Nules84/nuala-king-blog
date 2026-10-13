@@ -16,12 +16,18 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<BaseHead title={title} description={description} />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<style>
-			main {
-				max-width: 760px;
-				margin: 0 auto;
-				padding: 2rem 1.5rem 4rem;
-			}
+		main {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 4rem;
+    box-sizing: border-box;
+}
 
+article {
+    margin: 0;
+    padding: 0;
+}
 			.hero-image img {
 				display: block;
 				width: 100%;
