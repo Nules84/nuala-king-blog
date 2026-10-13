@@ -27,14 +27,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 						relationship with the living world.
 					</p>
 				</div>
+<img
+    class="portrait"
+    src="https://nualaking.com/nuala-king.jpg"
+    alt="Portrait of Nuala King"
+    width="420"
+    height="500"
+/>
 
-				<img
-					class="portrait"
-					src="/nuala-king.jpg"
-					alt="Portrait of Nuala King"
-					width="420"
-					height="500"
-				/>
 			</section>
 
 			<section class="content-section">
@@ -139,13 +139,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		max-width: 520px;
 	}
 
-	.portrait {
-		display: block;
-		width: 100%;
-		height: auto;
-		object-fit: cover;
-		filter: grayscale(100%);
-	}
+.portrait {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    justify-self: center;
+    filter: grayscale(100%);
+}
 
 	.content-section {
 		margin-bottom: 3rem;
