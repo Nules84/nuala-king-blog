@@ -9,42 +9,115 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<section class="intro">
+				<p class="eyebrow">Writer · Artist · Educator</p>
+				<h1>Nuala King</h1>
+				<p class="welcome">
+					Welcome. This is a home for my writing, creative work and ongoing
+					exploration of our relationship with place, story and the living world.
+				</p>
+			</section>
+
+			<section>
+				<h2>About</h2>
+				<p>
+					My background is in architecture and adult education. My writing and
+					creative practice explore Irish folklore, cultural memory, landscape
+					and ecological belonging.
+				</p>
+				<p>
+					I am particularly interested in how stories can reconnect us with
+					the places we inhabit and help us imagine more reciprocal relationships
+					with the natural world.
+				</p>
+			</section>
+
+			<section>
+				<h2>Selected work</h2>
+				<ul class="work-list">
+					<li>
+						<strong>Writing &amp; publications</strong>
+						<p>Essays, cultural writing and my contribution to <em>Dúchas</em>.</p>
+					</li>
+					<li>
+						<strong>Art &amp; placemaking</strong>
+						<p>Creative practice, community art and our connections with place.</p>
+					</li>
+					<li>
+						<strong>Music &amp; song</strong>
+						<p>Traditional singing and musical explorations, gathered here as they develop.</p>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Connect</h2>
+				<p>
+					Thank you for visiting. If my work resonates with you, or you would
+					like to get in touch, you are very welcome to contact me.
+				</p>
+				<p>
+					<a href="mailto:hello@nualaking.com">Email me</a>
+				</p>
+			</section>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	main {
+		max-width: 720px;
+		margin: 0 auto;
+		padding: 3rem 1.5rem 5rem;
+		line-height: 1.8;
+	}
+
+	.intro {
+		padding: 2rem 0 3rem;
+	}
+
+	.eyebrow {
+		font-size: 0.85rem;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		opacity: 0.7;
+	}
+
+	h1 {
+		font-size: clamp(2.8rem, 8vw, 4.5rem);
+		line-height: 1.1;
+		margin: 0.5rem 0 1.5rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		margin-top: 2.5rem;
+	}
+
+	.welcome {
+		font-size: 1.2rem;
+		max-width: 600px;
+	}
+
+	.work-list {
+		padding-left: 1.25rem;
+	}
+
+	.work-list li {
+		padding: 0.5rem 0;
+	}
+
+	.work-list p {
+		margin-top: 0.25rem;
+	}
+
+	a {
+		text-underline-offset: 0.2em;
+	}
+</style>
